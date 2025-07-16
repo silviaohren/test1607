@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLOG Standalone</title>
+  <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+  <main>
+    <div class="blog-intro-text">
+      <h1>BLOG</h1>
+      <p>Articles, case studies, and sound design stories.</p>
+    </div>
+    <div class="blog-articles-list"></div>
+    <section id="blog-upload-section">
+      <h4>📝 Carica nuovo articolo BLOG</h4>
+      <form class="project-form" action="#" method="POST" enctype="multipart/form-data" id="blog-upload-form">
+        <div class="form-group">
+          <label for="blog-title">Titolo Articolo</label>
+          <input type="text" id="blog-title" name="blog-title" class="contact-input" placeholder="Titolo dell'articolo" required>
+        </div>
+        <div class="form-group">
+          <label for="blog-content">Contenuto</label>
+          <textarea id="blog-content" name="blog-content" rows="7" class="contact-input" placeholder="Scrivi qui il contenuto dell'articolo..." required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="blog-tags">Tags</label>
+          <input type="text" id="blog-tags" name="blog-tags" class="contact-input" placeholder="Tags separati da virgola (es: sound design, film, silenzio)" required>
+        </div>
+        <div class="form-group">
+          <label for="blog-picture">Immagine (80:7 crop)</label>
+          <input type="file" id="blog-picture" name="blog-picture" accept="image/*" class="file-input" required>
+          <small>Carica un'immagine per l'articolo (verrà ritagliata 80:7)</small>
+          <div id="blog-crop-preview" style="margin-top:1rem;"></div>
+        </div>
+        <button type="submit" class="submit-btn">Carica Articolo</button>
+      </form>
+    </section>
+  </main>
+  <script src="blog.js"></script>
+</body>
+</html> 
